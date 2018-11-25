@@ -1,1 +1,2 @@
-# dw33d-nand-overlay
+这个补丁用于启用大麦 dw33d无线路由器nand闪存上的rootfs_data分区作为overlay文件系统！ 
+补丁在openwrt官方源码（6680fab9474a8a2d66d5ef86e2c392abe0d2c62d快照）编译的固件进行了简单测试。
