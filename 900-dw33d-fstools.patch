@@ -1,0 +1,29 @@
+--- a/mount_root.c
++++ b/mount_root.c
+@@ -59,18 +59,7 @@ start(int argc, char *argv[1])
+ 	volume_init(data);
+ 	switch (volume_identify(data)) {
+ 	case FS_NONE:
+-		ULOG_WARN("no usable overlay filesystem found, using tmpfs overlay\n");
+-		return ramoverlay();
+-
+ 	case FS_DEADCODE:
+-		/*
+-		 * Filesystem isn't ready yet and we are in the preinit, so we
+-		 * can't afford waiting for it. Use tmpfs for now and handle it
+-		 * properly in the "done" call.
+-		 */
+-		ULOG_NOTE("jffs2 not ready yet, using temporary tmpfs overlay\n");
+-		return ramoverlay();
+-
+ 	case FS_EXT4:
+ 	case FS_F2FS:
+ 	case FS_JFFS2:
+@@ -83,6 +72,7 @@ start(int argc, char *argv[1])
+ 		break;
+ 	}
+ 
++	fs_state_set("/overlay", FS_STATE_READY);
+ 	return 0;
+ }
+ 
