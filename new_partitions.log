@@ -1,0 +1,297 @@
+[    0.000000] Linux version 4.14.87 (jwd@d2680) (gcc version 7.3.0 (OpenWrt GCC 7.3.0 r8661-32bc733796)) #0 Tue Dec 11 22:00:32 2018
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019750 (MIPS 74Kc)
+[    0.000000] SoC: Qualcomm Atheros QCA9558 ver 1 rev 0
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 10000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] On node 0 totalpages: 65536
+[    0.000000] free_area_init_node: node 0, pgdat 805fa440, node_mem_map 81000020
+[    0.000000]   Normal zone: 512 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 65536 pages, LIFO batch:15
+[    0.000000] random: get_random_bytes called from start_kernel+0x8c/0x48c with crng_init=0
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line:  board=DW33D mtdparts=spi0.0:256k(u-boot)ro,64k(u-boot-env),3072k(kernel),12928k(fr),64k(art)ro;ar934x-nfc:128m(ubi) console=ttyS0,115200 rootfstype=squashfs noinitrd
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 253212K/262144K available (4434K kernel code, 274K rwdata, 1040K rodata, 260K init, 220K bss, 8932K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 51
+[    0.000000] Clocks: CPU:720.000MHz, DDR:600.000MHz, AHB:200.000MHz, Ref:40.000MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 5309056796 ns
+[    0.000007] sched_clock: 32 bits at 360MHz, resolution 2ns, wraps every 5965232126ns
+[    0.008294] Calibrating delay loop... 358.80 BogoMIPS (lpj=1794048)
+[    0.074984] pid_max: default: 32768 minimum: 301
+[    0.080059] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.087097] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.096464] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.106961] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.114405] NET: Registered protocol family 16
+[    0.120212] MIPS: machine is DomyWifi DW33D
+[    0.125085] registering PCI controller with io_map_base unset
+[    0.131359] ar724x-pci ar724x-pci.1: PCIe link is down
+[    0.136820] registering PCI controller with io_map_base unset
+[    0.636684] PCI host bridge to bus 0000:00
+[    0.641046] pci_bus 0000:00: root bus resource [mem 0x10000000-0x11ffffff]
+[    0.648394] pci_bus 0000:00: root bus resource [io  0x0000]
+[    0.654320] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    0.661545] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.669993] pci 0000:00:00.0: [168c:003c] type 00 class 0x028000
+[    0.670047] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x001fffff 64bit]
+[    0.670101] pci 0000:00:00.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+[    0.670175] pci 0000:00:00.0: supports D1
+[    0.670184] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[    0.670358] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 00
+[    0.670381] pci 0000:00:00.0: BAR 0: assigned [mem 0x10000000-0x101fffff 64bit]
+[    0.678205] pci 0000:00:00.0: BAR 6: assigned [mem 0x10200000-0x1020ffff pref]
+[    0.685983] PCI host bridge to bus 0000:01
+[    0.690363] pci_bus 0000:01: root bus resource [mem 0x12000000-0x13ffffff]
+[    0.697673] pci_bus 0000:01: root bus resource [io  0x0001]
+[    0.703607] pci_bus 0000:01: root bus resource [??? 0x00000000 flags 0x0]
+[    0.710826] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+[    0.719268] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    0.722118] clocksource: Switched to clocksource MIPS
+[    0.764446] NET: Registered protocol family 2
+[    0.769778] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.777259] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.784050] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.790914] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.797168] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.804051] NET: Registered protocol family 1
+[    0.808716] PCI: CLS 0 bytes, default 32
+[    0.811189] Crashlog allocated RAM at address 0x3f00000
+[    0.817861] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    0.828836] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.835079] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.854695] io scheduler noop registered
+[    0.858864] io scheduler deadline registered (default)
+[    0.864719] Serial: 8250/16550 driver, 16 ports, IRQ sharing enabled
+[    0.873208] console [ttyS0] disabled
+[    0.897088] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11, base_baud = 2500000) is a 16550A
+[    0.906275] console [ttyS0] enabled
+[    0.913692] bootconsole [early0] disabled
+[    0.927612] m25p80 spi0.0: found mx25l12805d, expected m25p80
+[    0.934030] m25p80 spi0.0: mx25l12805d (16384 Kbytes)
+[    0.939180] 5 cmdlinepart partitions found on MTD device spi0.0
+[    0.945211] Creating 5 MTD partitions on "spi0.0":
+[    0.950078] 0x000000000000-0x000000040000 : "u-boot"
+[    0.956253] 0x000000040000-0x000000050000 : "u-boot-env"
+[    0.963375] 0x000000050000-0x000000350000 : "kernel"
+[    0.969528] 0x000000350000-0x000000ff0000 : "fr"
+[    0.975879] 0x000000ff0000-0x000001000000 : "art"
+[    0.982765] nand: device found, Manufacturer ID: 0x01, Chip ID: 0xf1
+[    0.989215] nand: AMD/Spansion NAND 128MiB 3,3V 8-bit
+[    0.994369] nand: 128 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+[    1.002069] Scanning device for bad blocks
+[    1.009794] random: fast init done
+[    1.099422] 1 cmdlinepart partitions found on MTD device ar934x-nfc
+[    1.105792] Creating 1 MTD partitions on "ar934x-nfc":
+[    1.111007] 0x000000000000-0x000008000000 : "ubi"
+[    1.117922] libphy: Fixed MDIO Bus: probed
+[    1.129566] switch0: Atheros AR8337 rev. 2 switch registered on ag71xx-mdio.0
+[    1.822617] libphy: ag71xx_mdio: probed
+[    2.453528] ag71xx ag71xx.0: connected to PHY at ag71xx-mdio.0:00 [uid=004dd036, driver=Atheros AR8216/AR8236/AR8316]
+[    2.464794] eth0: Atheros AG71xx at 0xb9000000, irq 4, mode:RGMII
+[    3.093673] eth1: Atheros AG71xx at 0xba000000, irq 5, mode:SGMII
+[    3.101480] NET: Registered protocol family 10
+[    3.110127] Segment Routing with IPv6
+[    3.113976] NET: Registered protocol family 17
+[    3.118524] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    3.131946] 8021q: 802.1Q VLAN Support v1.8
+[    3.139449] UBI: auto-attach mtd5
+[    3.142872] ubi0: attaching mtd5
+[    4.834777] random: crng init done
+[    5.062056] ubi0: scanning is finished
+[    5.085290] ubi0: attached mtd5 (name "ubi", size 128 MiB)
+[    5.090862] ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    5.097866] ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    5.104756] ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    5.111812] ubi0: good PEBs: 1024, bad PEBs: 0, corrupted PEBs: 0
+[    5.118003] ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+[    5.125331] ubi0: max/mean erase counter: 2/0, WL threshold: 4096, image sequence number: 2102971340
+[    5.134595] ubi0: available PEBs: 0, total reserved PEBs: 1024, PEBs reserved for bad PEB handling: 20
+[    5.144075] ubi0: background thread "ubi_bgt0d" started, PID 350
+[    5.151502] block ubiblock0_0: created from ubi0:0(rootfs)
+[    5.157115] ubiblock: device ubiblock0_0 (rootfs) set to be root filesystem
+[    5.164186] hctosys: unable to open rtc device (rtc0)
+[    5.176939] VFS: Mounted root (squashfs filesystem) readonly on device 254:0.
+[    5.185119] Freeing unused kernel memory: 260K
+[    5.189628] This architecture does not have kernel memory protection.
+[    5.725223] init: Console is alive
+[    5.728851] init: - watchdog -
+[    7.277513] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    7.366931] usbcore: registered new interface driver usbfs
+[    7.372603] usbcore: registered new interface driver hub
+[    7.378070] usbcore: registered new device driver usb
+[    7.418654] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    7.434011] SCSI subsystem initialized
+[    7.441973] ehci-platform: EHCI generic platform driver
+[    7.447398] ehci-platform ehci-platform.0: EHCI Host Controller
+[    7.453461] ehci-platform ehci-platform.0: new USB bus registered, assigned bus number 1
+[    7.463739] ehci-platform ehci-platform.0: TX-TX IDP fix enabled
+[    7.469846] ehci-platform ehci-platform.0: irq 48, io mem 0x1b000000
+[    7.502163] ehci-platform ehci-platform.0: USB 2.0 started, EHCI 1.00
+[    7.509384] hub 1-0:1.0: USB hub found
+[    7.513527] hub 1-0:1.0: 1 port detected
+[    7.517915] ehci-platform ehci-platform.1: EHCI Host Controller
+[    7.523986] ehci-platform ehci-platform.1: new USB bus registered, assigned bus number 2
+[    7.534280] ehci-platform ehci-platform.1: TX-TX IDP fix enabled
+[    7.540387] ehci-platform ehci-platform.1: irq 49, io mem 0x1b400000
+[    7.572162] ehci-platform ehci-platform.1: USB 2.0 started, EHCI 1.00
+[    7.579370] hub 2-0:1.0: USB hub found
+[    7.583496] hub 2-0:1.0: 1 port detected
+[    7.591442] usbcore: registered new interface driver usb-storage
+[    7.598227] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    7.615948] init: - preinit -
+[    7.948140] usb 1-1: new high-speed USB device number 2 using ehci-platform
+[    8.205841] usb-storage 1-1:1.0: USB Mass Storage device detected
+[    8.221900] scsi host0: usb-storage 1-1:1.0
+[    8.476295] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    9.243850] scsi 0:0:0:0: Direct-Access     Generic  STORAGE DEVICE   0903 PQ: 0 ANSI: 6
+[    9.563580] eth0: link up (1000Mbps/Full duplex)
+[    9.568407] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    9.598915] sd 0:0:0:0: [sda] 31116288 512-byte logical blocks: (15.9 GB/14.8 GiB)
+[    9.608032] sd 0:0:0:0: [sda] Write Protect is off
+[    9.612945] sd 0:0:0:0: [sda] Mode Sense: 21 00 00 00
+[    9.614279] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    9.633398]  sda: sda1
+[    9.640279] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   11.718148] UBIFS (ubi0:1): background thread "ubifs_bgt0_1" started, PID 475
+[   11.870730] UBIFS (ubi0:1): recovery needed
+[   12.129771] UBIFS (ubi0:1): recovery completed
+[   12.134393] UBIFS (ubi0:1): UBIFS: mounted UBI device 0, volume 1, name "rootfs_data"
+[   12.142357] UBIFS (ubi0:1): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[   12.152425] UBIFS (ubi0:1): FS size: 121769984 bytes (116 MiB, 959 LEBs), journal size 6094848 bytes (5 MiB, 48 LEBs)
+[   12.163196] UBIFS (ubi0:1): reserved for root: 4952683 bytes (4836 KiB)
+[   12.169909] UBIFS (ubi0:1): media format: w4/r0 (latest is w5/r0), UUID D50F0DCA-9555-4BB7-A743-EA59485B06B8, small LPT model
+[   12.198395] mount_root: loading kmods from internal overlay
+[   12.252099] kmodloader: loading kernel modules from /tmp/overlay/upper/etc/modules-boot.d/*
+[   12.292699] kmodloader: done loading kernel modules from /tmp/overlay/upper/etc/modules-boot.d/*
+[   12.604549] block: attempting to load /tmp/ubifs_cfg/upper/etc/config/fstab
+[   12.620279] block: extroot: not configured
+[   12.626660] mount_root: switching to ubifs overlay
+[   12.675359] urandom-seed: Seeding with /etc/urandom.seed
+[   12.874579] eth0: link down
+[   12.888152] procd: - early -
+[   12.891156] procd: - watchdog -
+[   13.495051] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: 
+[   13.517344] procd: - watchdog -
+[   13.520784] procd: - ubus -
+[   13.756286] procd: - init -
+[   14.253415] kmodloader: loading kernel modules from /etc/modules.d/*
+[   14.298603] FS-Cache: Loaded
+[   14.318270] Initializing XFRM netlink socket
+[   14.325035] NET: Registered protocol family 15
+[   14.357331] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   14.375208] Loading modules backported from Linux version v4.19-rc5-0-g6bf4ca7fbc85
+[   14.383020] Backport generated by backports.git v4.19-rc5-1-0-g05571dcd
+[   14.392672] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   14.412189] nf_conntrack version 0.5.0 (4096 buckets, 16384 max)
+[   14.471194] usbcore: registered new interface driver usblp
+[   14.494909] xt_time: kernel timezone is -0000
+[   14.778995] PPP generic driver version 2.4.2
+[   14.785714] NET: Registered protocol family 24
+[   14.815645] pci 0000:00:00.0: using irq 40 for pin 1
+[   14.821806] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[   14.827763] ath10k_pci 0000:00:00.0: pci irq legacy oper_irq_mode 1 irq_mode 0 reset_mode 0
+[   15.107003] ath10k_pci 0000:00:00.0: Direct firmware load for ath10k/pre-cal-pci-0000:00:00.0.bin failed with error -2
+[   15.117888] ath10k_pci 0000:00:00.0: Falling back to user helper
+[   15.188925] firmware ath10k!pre-cal-pci-0000:00:00.0.bin: firmware_loading_store: map pages failed
+[   15.201894] ath10k_pci 0000:00:00.0: Direct firmware load for ath10k/QCA988X/hw2.0/firmware-6.bin failed with error -2
+[   15.212798] ath10k_pci 0000:00:00.0: Falling back to user helper
+[   15.348108] firmware ath10k!QCA988X!hw2.0!firmware-6.bin: firmware_loading_store: map pages failed
+[   15.361609] ath10k_pci 0000:00:00.0: qca988x hw2.0 target 0x4100016c chip_id 0x043202ff sub 0000:0000
+[   15.371012] ath10k_pci 0000:00:00.0: kconfig debug 0 debugfs 1 tracing 0 dfs 1 testmode 1
+[   15.384059] ath10k_pci 0000:00:00.0: firmware ver 10.2.4-1.0-00041 api 5 features no-p2p,raw-mode,mfp,allows-mesh-bcast crc32 f43fa422
+[   15.482261] ath10k_pci 0000:00:00.0: Direct firmware load for ath10k/QCA988X/hw2.0/board-2.bin failed with error -2
+[   15.492872] ath10k_pci 0000:00:00.0: Falling back to user helper
+[   15.567534] firmware ath10k!QCA988X!hw2.0!board-2.bin: firmware_loading_store: map pages failed
+[   15.598331] ath10k_pci 0000:00:00.0: board_file api 1 bmi_id N/A crc32 bebc7c08
+[   16.711856] ath10k_pci 0000:00:00.0: htt-ver 2.1 wmi-op 5 htt-op 2 cal file max-sta 128 raw 0 hwcrypto 1
+[   16.853365] ath: EEPROM regdomain: 0x0
+[   16.853371] ath: EEPROM indicates default country code should be used
+[   16.853374] ath: doing EEPROM country->regdmn map search
+[   16.853387] ath: country maps to regdmn code: 0x3a
+[   16.853391] ath: Country alpha2 being used: US
+[   16.853395] ath: Regpair used: 0x3a
+[   16.965798] batman_adv: B.A.T.M.A.N. advanced openwrt-2018.4-0 (compatibility version 15) loaded
+[   16.994952] ath: EEPROM regdomain: 0x0
+[   16.994959] ath: EEPROM indicates default country code should be used
+[   16.994962] ath: doing EEPROM country->regdmn map search
+[   16.994975] ath: country maps to regdmn code: 0x3a
+[   16.994980] ath: Country alpha2 being used: US
+[   16.994983] ath: Regpair used: 0x3a
+[   17.012449] ieee80211 phy1: Selected rate control algorithm 'minstrel_ht'
+[   17.014097] ieee80211 phy1: Atheros AR9550 Rev:0 mem=0xb8100000, irq=47
+[   17.090961] kmodloader: done loading kernel modules from /etc/modules.d/*
+[   25.852707] eth1: link up (1000Mbps/Full duplex)
+[   25.883484] br-lan: port 1(eth1.1) entered blocking state
+[   25.888967] br-lan: port 1(eth1.1) entered disabled state
+[   25.894754] device eth1.1 entered promiscuous mode
+[   25.899620] device eth1 entered promiscuous mode
+[   25.983906] br-lan: port 1(eth1.1) entered blocking state
+[   25.989393] br-lan: port 1(eth1.1) entered forwarding state
+[   25.995226] IPv6: ADDRCONF(NETDEV_UP): br-lan: link is not ready
+[   26.079752] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   26.127390] IPv6: ADDRCONF(NETDEV_UP): eth0.2: link is not ready
+[   26.922647] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   27.163642] eth0: link up (1000Mbps/Full duplex)
+[   27.189262] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   27.242254] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.2: link becomes ready
+[   27.682095] 8021q: adding VLAN 0 to HW filter on device bat0
+[   27.709923] br-lan: port 2(bat0) entered blocking state
+[   27.715275] br-lan: port 2(bat0) entered disabled state
+[   27.720811] device bat0 entered promiscuous mode
+[   27.725691] br-lan: port 2(bat0) entered blocking state
+[   27.731000] br-lan: port 2(bat0) entered forwarding state
+[   27.845939] batman_adv: bat0: fragmentation: Changing from: enabled to: disabled
+[   28.204212] batman_adv: bat0: No IGMP Querier present - multicast optimizations disabled
+[   28.212453] batman_adv: bat0: No MLD Querier present - multicast optimizations disabled
+[   28.782374] ath: EEPROM regdomain: 0x809c
+[   28.786451] ath: EEPROM indicates we should expect a country code
+[   28.792666] ath: doing EEPROM country->regdmn map search
+[   28.798047] ath: country maps to regdmn code: 0x52
+[   28.802919] ath: Country alpha2 being used: CN
+[   28.807420] ath: Regpair used: 0x52
+[   28.810959] ath: regdomain 0x809c dynamically updated by user
+[   28.816865] ath: EEPROM regdomain: 0x809c
+[   28.820926] ath: EEPROM indicates we should expect a country code
+[   28.827114] ath: doing EEPROM country->regdmn map search
+[   28.832511] ath: country maps to regdmn code: 0x52
+[   28.837367] ath: Country alpha2 being used: CN
+[   28.841871] ath: Regpair used: 0x52
+[   28.845421] ath: regdomain 0x809c dynamically updated by user
+[   33.860799] ath10k_pci 0000:00:00.0: pdev param 0 not supported by firmware
+[   33.882470] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   33.916212] IPv6: ADDRCONF(NETDEV_UP): wlan1-1: link is not ready
+[   34.086871] IPv6: ADDRCONF(NETDEV_CHANGE): wlan1-1: link becomes ready
+[   34.208416] IPv6: ADDRCONF(NETDEV_UP): wlan1: link is not ready
+[   34.444117] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   34.674694] br-lan: port 3(wlan0) entered blocking state
+[   34.680087] br-lan: port 3(wlan0) entered disabled state
+[   34.685901] device wlan0 entered promiscuous mode
+[   34.690789] br-lan: port 3(wlan0) entered blocking state
+[   34.696222] br-lan: port 3(wlan0) entered forwarding state
+[   35.239265] batman_adv: bat0: Adding interface: wlan1
+[   35.244445] batman_adv: bat0: The MTU of interface wlan1 is too small (1500) to handle the transport of batman-adv packets. If you experience problems getting traffic through try increasing the MTU to 1560.
+[   35.263181] batman_adv: bat0: Interface activated: wlan1
+[   35.554083] br-lan: port 4(wlan1-1) entered blocking state
+[   35.559784] br-lan: port 4(wlan1-1) entered disabled state
+[   35.565686] device wlan1-1 entered promiscuous mode
+[   36.422398] IPv6: ADDRCONF(NETDEV_CHANGE): wlan1: link becomes ready
+[   36.758295] br-lan: port 4(wlan1-1) entered blocking state
+[   36.763903] br-lan: port 4(wlan1-1) entered forwarding state
